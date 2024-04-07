@@ -1,46 +1,212 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
-body{
-
+*{
+    padding: 0rem;
+    margin: 0rem;
+    text-decoration: none;
+    list-style: none;
+    font-family: "Roboto", sans-serif;
 }
- .navdiv{
-        background-color: grey;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-    }
-    .logo{
-        font-size: 4rem;
-        font-weight: 900; 
-        color: black;
-    }
-    ul li{
-        list-style: none;
-        display: inline-block;
-        color: white;
-    }
-footer{
-    background: grey;
+body{
+    background: #eb9834;
+}
+li{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+    font-size: 1rem; 
+}
+
+a:hover{
+    color: #348ceb;
+}
+
+header{
+    position: relative;
+    padding: 0rem 2rem;
+}
+
+.navdiv{
+    width: 100%;
+    height: 60px;
+    max-width: 1200px;
+    margin: 0px auto;
     display: flex;
-    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navdiv .logo {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.navdiv .links{
+    display: flex;
+    gap: 2rem;
+}
+.action-btn{
+    border: none;
+    color: white;
+    background-color: #348ceb;
+    border-radius: 2rem;
+    cursor: pointer;
+    outline: none;
+    font-size: 0.8rem;
+    font-weight: bold;
+    padding: 0.5rem 1rem;
+    transition: scale 0.2 ease;
+}
+
+.action-btn:hover{
+    color: white;
+    scale: 1.05rem;
+}
+
+.action-btn:active{
+    scale: 0.95rem;
+}
+
+.navbar .toggle-btn{
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+    display: none;
+}
+
+/* .dropdown-menu{
+    display: none;
+    position: absolute;
+    right: 2rem;
+    top: 60px;
+    height: 0%;
+    width: 300px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    backdrop-filter: blur(15);
+    overflow: hidden;
+    transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+} */
+
+/* .dropdown-menu.opan{
+    height: 240px;
+} */
+
+/* .dropdown-menu li{
+    padding: 0.7rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+} */
+
+@media(max-width: 992) {
+    .navdiv .links
+    .navbar .action-btn {
+        display: none;
+    }
+}
+
+.navbar .toggle-btn {
+    display: block;
+}
+
+/* .dropdown-menu{
+    display: block;
+} */
+
+
+footer{
+    background: #34343d;
+}
+
+/* .footer{
+    display: grid;
+    grid-template-columns: repeat(autofix, minmax(200px, auto));
+    gap: 3.5rem;
+    background: 1a242f;
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    bottom:  0px;
+    } */
+
+.sociallcons{
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+}
+
+.sociallcons a {
+    text-decoration: none;
+    padding: 10px;
+    background-color: white;
+    margin: 10px;
+    border-radius: 50%;
+}
+
+.sociallcons a i {
+    opacity: 0.9;
+    color: black;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+.sociallcons a:hover{
+    background: black;
+    transition: 0.5s;
+}
+
+.container{
+    margin: 30px;
+}
+
+.container ul{
+    display: flex;
+    justify-content: center;
+}
+    
+.container ul a{
+    opacity: 0.9;
+    margin: 20px;
+    color: white;
+    text-decoration: none;
+    transition: 0.5s;
+    font-size: 1.3rem;
+}
+
+.container ul a:hover{
+    opacity: 1;
+}
+
+.bottom-bar{
+    background-color: #348ceb;
+    padding: 20px;
+    text-align: center;
+}
+
+.bottom-bar p {
+    color: white;
+}
+
+.designer{
+    opacity: 0.7;
+    text-transform: uppercase;
+    letter-spacing: 0px ;
+    font-weight: 400;
+    margin: 0rem 5px;
+    height: 1rem;
+}
+
+@media(max-width: 700px){
+    .container ul {
+        flex-direction: column;
     }
 
-    .footer-content{
-        display: flex;
-        flex-wrap: wrap;
-        /* justify-content: space-around; */
-         display: inline-block;
-        list-style: none;
-    }
-    footer div{
-        padding: 0rem 20rem 0rem 2rem;
-        color: white;
-        /* display: flex;
-        justify-content: space-between; */
-    }
-    p {
-        /* display: flex;
-        justify-content: center;
-        align-items: center; */
+    .container ul a{
+        width: 100%;
         text-align: center;
-        color: black;
+        margin: 10px;
     }
+}
